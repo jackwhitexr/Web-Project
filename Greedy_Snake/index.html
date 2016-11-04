@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/buttons.css" />
+		<link rel="stylesheet" href="css/task_choose.css" />
+		<link rel="stylesheet" href="css/snake.css" />
+		<meta charset="UTF-8">
+		<title>贪吃蛇行动队</title>
+	</head>
+	<body>
+		<!--游戏欢迎界面-->
+		<div id="game_panel" >
+			<div id="btn_panel">
+				<img id="btn_sound" src="img/btn_sound.png" />
+			</div>
+			<div id="welcome_panel">
+				<img src="img/title.png" />
+			</div>
+			<div id="menu_panel">
+				<div id="start_panel">
+					<button class="button button-3d button-action button-pill"
+						id="btn_gamestart" onclick="startGame()">Game Start</button>
+				</div>
+				<div id="help_panel">
+					<button class="button button-3d button-action button-pill"
+						id="btn_gamehelp">Game Help</button>
+				</div>
+				<div id="ranking_panel">
+					<button class="button button-3d button-action button-pill"
+						id="btn_ranking">Rankings</button>
+				</div>
+			</div>
+		</div>
+		
+		<!--关卡选择-->
+		<div id="task_choose">
+			<div class="btn_panel">
+				<img src="img/back_button.png" onclick="backToMain()"/>
+			</div>
+			<div class="title_panel">
+				<img class="mode_select" src="img/mode_select.png" />
+			</div>
+			<div class="choose_panel">
+				<ul>
+					<li><button id="task_button" class="button button-royal button-rounded button-giant tip mode_btn" 
+						onclick="enterTaskMode()"><font>任务模式</font>
+						<span><p><font>任务模式目标：<br />获得一定分数后由于大雾食物透明度降低，更高分数之后出现敌人，控制你的贪吃蛇完美完成任务。</font></p></span>
+					</button></li>
+					<li><button id="classic_button" class="button button-royal button-rounded button-giant tip mode_btn" 
+						onclick="enterClassicMode()"><font>经典模式</font>
+						<span><p><font>经典模式目标：<br />每食一物，尾巴变长，速度增加。控制贪吃蛇吃掉最后一个食物。</font></p></span>
+					</button></li>
+					<li><button id="detect_button" class="button button-royal button-rounded button-giant tip mode_btn" 
+						onclick="enterDetectMode()" disabled="true"><font>探测模式</font>
+						<span><p><font>探测模式目标：<br />一次产生多个雾化食物目标，控制你的贪吃蛇利用探测器吃掉他们。等待开发</font></p></span>
+					</button></li>
+					<li><button id="war_button" class="button button-royal button-rounded button-giant tip mode_btn" 
+						onclick="enterWarMode()" disabled="true"><font>战场模式</font>
+						<span><p><font>战场模式目标：<br />通过你灵活的控制，让贪吃蛇在不断雾化的食物和强大的敌人干扰下存活。等待开发</font></p></span>
+					</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--游戏界面-->
+		<div id="snake">
+			<div id="title">
+				<img id="btn_back" src="img/back_button.png" onclick="backToSelect()"/>
+				<img id="mode_title" src=""/>
+			</div>
+			<div id="main">
+				<div id="main-left">
+					<img id='test' src="img/bg.jpg" />
+				</div>
+				<canvas id="stage" width="400 " height="400 " style="border:1px solid #c3c3c3 ">
+			Your browser does not support canvas!</canvas>
+				<div id="main-right">
+					<button id="btn_start" class="button button-3d button-action button-pill" onclick="start()">
+					<font id="kaishi">开始</font></button>
+					<button id="btn_stop" class="button button-3d button-action button-pill" disabled="true" onclick="stopGame()">
+					<font>重来</font></button>
+					<button id="btn_help" class="button button-3d button-action button-pill" onclick="help()">
+					<font>帮助</font></button>
+				</div>
+			</div>
+			<div id="msgBoard">
+				<div id="msg-left">
+					<h3 id="position">系统定位：</h3>
+					<h3 id="foodAlert">食物出现：</h3>
+					<h3 id="enemyAlert">敌人出现：</h3>
+				</div>
+				<div id="msg-right">
+					<h3>操作提示：方向键控制蛇的移动</h3>
+					<h3 id="score">你的得分是：</h3>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script type="text/javascript" src="js/snake.js" ></script>
+	</script>
+</html>

@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#btn_back{
+	float: left;
+	width: 50px;
+	margin: 20px 0 0 20px;
+	cursor: pointer;  /*该属性用于设置指针效果为手指*/
+}
+
+#title {
+	width: 922px;
+	height: 80px;
+	background: aliceblue;
+	margin-bottom: 20px;
+}
+
+#mode_title {
+	width: 300px;
+	height:70px;
+	margin: 0 auto;
+	display: block;
+}
+
+#snake {
+	width: 900px;
+	position: relative;
+	left: 100px;
+	top: 20px;
+	display: none;
+}
+
+#main {
+	width: 922px;
+	height: 400px;
+}
+
+#main-left {
+	float: left;
+	width: 250px;
+	height: 100%;
+	background: aliceblue;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+
+#main-right {
+	float: left;
+	width: 250px;
+	height: 100%;
+	background: aliceblue;
+	margin-left: 10px;
+}
+
+#stage {
+	float: left;
+	background: lightgreen;
+	display: block;
+}
+
+#msgBoard {
+	width: 916px;
+	height: 100px;
+	margin-top: 20px;
+	/*border: 2px solid black;*/
+}
+
+#msg-left {
+	font-family: "微软雅黑";
+	float: left;
+	width: 450px;
+	height: 100%;
+	margin-right: 10px;
+	background: aliceblue;
+}
+
+#msg-left h3 {
+	line-height: 30px;
+}
+
+#msg-right h3 {
+	font-family: "微软雅黑";
+	line-height: 30px;
+}
+
+#msg-right {
+	float: right;
+	width: 450px;
+	height: 100%;
+	background: aliceblue;
+}
+
+
+/*开源库的按钮包*/
+
+#btn_start {
+	display: block;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+#btn_stop {
+	margin: auto;
+	display: block;
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+#btn_help {
+	margin: auto;
+	display: block;
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
